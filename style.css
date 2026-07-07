@@ -1,0 +1,333 @@
+body{           /*Step-1*/
+     font-family: "Montserrat", sans-serif;
+     margin:0px;
+     background-color: black;
+     color:white;
+     overflow: hidden;
+}
+.main_body{
+    display: flex;/*Step 2*/
+    height: 100vh;/*Step 3*/
+    padding:2.5rem;/*Step 28*/
+    
+}
+.sidebar{
+    background-color:black; /*Step 11*/ /*green; -Step 4*/
+    width:340px;/*Step 5*/
+    border-radius: 1rem; /*Step 9*/
+    margin-right: 1rem;/*Step 32*/
+}
+.main_content{
+    background-color: black; /*Step 11*//*aqua;-Step 4*/
+    flex:1;/*Step 6*/
+    border-radius: 1rem; /*Step 9*/
+    overflow:auto;/*Step 10*/
+    margin-left:2rem;/*Step 48*/
+    
+}
+.play_bar{
+    background-color:black; /*Step 11*/ /*red;-Step 4*/
+    position:fixed;/*Step 7*/
+    bottom:0px;/*Step 7*/
+    width:100%;/*Step 8*/
+    height:80px;/*Step 8*/
+}
+                                    /*SIDE BAR STYLLING*/
+a{ /*Step 12*/
+    text-decoration: none;
+    color:white;
+}
+.nav{ /*Step 13*/
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding:0.5rem 0.75rem;
+
+}
+.navoption{  /*Step 14*/
+    line-height: 2.5rem;
+    opacity: 0.7;/*Step 16*/
+    padding:0.5rem 0.75rem;/*Step 20*/
+
+}
+.navoption:hover{ /*Step 17*/
+    opacity: 1;
+}
+.navoption i{ /*Step 15*/
+    font-size: 1.25rem;
+}
+.navoption a{ /*Step 15*/
+    font-size: 1rem;
+    margin-left: 1rem; /*Step 19*/
+}
+.navoption input{ /*Step 19*/
+    margin-left:1rem;
+}
+/*Step 18:inline-opacity given to navoption1*/
+.library{ /*Step:19*/
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;/*Step:23*/
+    margin-top:0.5rem;/*Step:23*/
+    padding:0.5rem 0.75rem;/*Step:23*/
+}
+.options{ /*Step:20*/
+    display: flex;
+    justify-content: space-between;/*Step:22*/
+    align-items: center;/*Step:22*/
+    
+}
+.libraryheader{ /*Step 27*/
+    opacity:0.7;
+    cursor:pointer;
+}
+.libraryheader:hover{ /*Step 27*/
+    opacity: 1;
+}
+.library .options img{ /*Step:21*/
+    width:1.25rem;
+    height:1.25rem;
+}
+/*Step:24- added class="navoption" to existing class="options" to copy stylling*/
+.icons{ /*Step:25*/
+    font-size:1.25rem;
+    display:flex;
+    
+}
+.icons i{ /*Step 26*/
+    opacity:0.7;
+    margin:1rem;
+
+}
+.icons i:hover{ /*Step 26*/
+    opacity:1;
+}
+.box{/*Step 29*/
+    background-color: #232323;
+    height: 9rem;
+    border-radius: 0.75rem;
+    margin:0.75rem 0 1.75rem 0;
+    padding: 0.75rem 1.25rem;
+    
+}
+.boxp1{ /*Step 30*/
+    font-size:1rem;
+    font-weight: 500;
+}
+.boxp2{ /*Step 30*/
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+.badge{ /*Step 31*/
+    background-color: white;
+    border:none;
+    border-radius: 100px;
+    padding:0.25rem 0.5rem;
+    font-weight: 700;
+    margin-top:0.5rem;
+    height:2rem;
+    width:fit-content;
+}
+                                    /*MAIN CONTENT STYLLING(Step 33-51)*/                        
+.sticky_nav{ /*Step-33*/
+    position:sticky;
+    top:0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 0 1rem 0;
+    z-index: 10;/*Step 51*/ /*JO bhi tex card par tha woh sticky nav par visible ho raha tha so added z index*/
+}
+.sticky_navoption1{ /*Step-34*/
+    margin-left:0.75rem ;
+}
+.sticky_navoption1 img{ /*Step-35*/
+    height: 2rem;
+}
+.sticky_navoption2{ /*Step-36*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:2rem;
+}
+/*Step-37: added additional class="sticky_navitem" to class="badge" to group 2buttons and icon together*/
+.sticky_navitem{ /*Step 38*/
+    margin-right:1rem;
+}
+/*Step-39: added additional class="dark_badge" to class="badge sticky_navitem " to individually change bg-color*/
+.dark_badge{ /*Step 40*/
+    background-color: black;
+    color:white;
+}
+/*Step-41:added inline style="margin-right:5px" to dark-badge icon*/
+@media(max-width:1000px){ /*Step 42*/
+    .hide{
+        display: none;
+    }
+}
+
+.card_container{ /*Step 43*/
+    background-color: #232323;
+    width:160px;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+    margin:10px;
+    border-radius: 0.5rem;
+    
+}
+.card_container img{ /*Step 44*/
+    border-radius: 0.5rem;
+    margin-top:0.5rem;
+    
+}
+.card_title{ /*Step 45*/
+    font-weight: 700;
+    font-size: 1rem;
+}
+.card_info{ /*Step 46*/
+    opacity: 0.75;
+    font-size: 0.85rem;
+}
+.cards{ /*Step 47*/
+    display: flex;
+    margin-right: 2rem;
+    flex-wrap: wrap;
+   
+}
+.footer{ /*Step 49*/
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{  /*Step 50*/
+    width:90%;
+    height:30%;
+    border-top:1px solid white;
+    opacity: 0.4;
+
+}
+                                   /*PLAYBAR STYLLING*/
+.play_bar{
+    display: flex;
+}
+    
+.album{
+     width:25%;
+     display: flex;
+     margin:1px 10px 1px 10px;
+     padding:5px;
+}
+    
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singer{
+    line-height: 0.2rem;
+    margin:10px;
+}
+.info i{
+    margin:5px;
+    opacity: 0.75;
+}
+.album img{
+    height:3.75rem;
+    width:5rem;
+    margin-right:15px;
+    margin-bottom: 10px;
+} 
+.player{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+.upper img{
+    height:1.25rem;
+    margin:15px 10px 5px 10px;
+    opacity: 0.7;
+}
+.upper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upperitems{
+    margin:0 20px 0 20px;
+    
+}
+.lower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0.5px 20px 5px 20px;
+}
+
+    
+.controls{
+    width:25%;
+    margin:20px;
+    display: flex;
+    
+    align-items: center;
+}
+.controls i{
+    margin:10px;
+    opacity: 0.7;
+}
+.progress_bar{
+    appearance: none;
+    cursor: pointer;
+    margin:0 10px 0 10px;
+}
+.progress_bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+    
+}
+.progress_bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width:1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top:-6px;
+}
+.volumebar{
+    opacity: 0.7;
+    appearance: none;
+    cursor: pointer;
+
+}
+.volumebar::-webkit-slider-runnable-track{
+    height: 0.2rem;
+    border-radius: 500px;
+
+}
+.volumebar::-webkit-slider-thumb{
+     appearance: none;
+    height: 1rem;
+    width:1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top:-6px;
+
+}
+.volumebar:hover{
+    opacity: 1;
+}
+.controls i:hover{
+    opacity: 1;
+}
